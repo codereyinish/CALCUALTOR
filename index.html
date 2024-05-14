@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #MainBox
+        {
+            width: 25%;
+            height: 65%;
+            border-radius: 8px; /* Rounded corners */
+            background-color: #090909;
+            border: 2px solid #70ff02;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        #DisplayScreen
+        {
+            width: 100%;
+            box-sizing: border-box;
+            height: 210px;
+            background-color: #070707; /* Light gray background */
+            border: 1px solid #bfbfbf; /* Light gray border */
+            /* border-radius: 8px; Rounded corners */
+            display: flex;
+            justify-content: flex-end; /* Align text to the right */
+            align-items: center;
+            padding: 10px;
+            font-size: 36px; /* Adjust font size */
+            color: black;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 36px; /* Adjust font size for display text */
+        }
+
+        #buttons
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0px 30px 30px 30px;
+            
+        }
+        #buttons>div{
+            margin: 5px; 
+        }
+        #ZeroBox
+        {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        #zero
+        {
+            width: 150px;
+            box-sizing: border-box;
+            border-radius: 11px; /* Make "0" button rectangular */
+        }
+
+        .Circularbtn
+        {
+            width: 60px; 
+            height: 60px; /* Adjust height as needed */
+            /* background-color: #020202;  */
+            border: 1px solid #d1d1d6;
+            border-radius: 50%; /* Makes the element circular */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px; /* Adjust font size as needed */
+            cursor: pointer;
+            color: white;
+        }
+        #buttons>div:not(:last-child):hover, #ZeroBox>div:hover{
+            background-color: #3ce200; /* Darker orange on hover */
+        }
+        .Circularbtn:active{ 
+            background-color: #073ae1; /* Darker orange when pressed */
+        }
+        /* :active is a pseudo state that is applied when element is active, usually when element is clicked, when mouse is pressed 
+        A link/ELEMENTS becomes active when we click on it*/
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id="MainBox">
+        <div id="DisplayScreen">Hello</div>
+        <div id="buttons">
+            <div class="Circularbtn" >AC</div>
+            <div class="Circularbtn" >+ / -</div>
+            <div class="Circularbtn" >%</div>
+            <div class="Circularbtn">÷</div>
+            <div class="Circularbtn">7</div>
+            <div class="Circularbtn">8</div>
+            <div class="Circularbtn">9</div>
+            <div class="Circularbtn">*</div>
+            <div class="Circularbtn">4</div>
+            <div class="Circularbtn">5</div>
+            <div class="Circularbtn">6</div>
+            <div class="Circularbtn">-</div>
+            <div class="Circularbtn">1</div>
+            <div class="Circularbtn">2</div>
+            <div class="Circularbtn">3</div>
+            <div class="Circularbtn">+</div>
+            <div id="ZeroBox">
+                <div class="Circularbtn" id="zero">0</div>
+                <div class="Circularbtn">.</div>
+                <div class="Circularbtn">=</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
